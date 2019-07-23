@@ -52,18 +52,13 @@
    SET CICSPLEX(CPSM55PX)
        CMAS(CICS55CM);
  
-   SET BUNDLE(GQBUNDLE)    
-     SCOPE(CICS5521)     
-     STATE(DISABLED);    
-                         
-
  UNDEPLOY BUNDLE(GQBUNDLE)
           SCOPE(CICS5521)
           STATE(DISCARDED);
  
  DEPLOY BUNDLE(GQBUNDLE)
         SCOPE(CICS5521)
-    BUNDLEDIR(/cicssvy/cics5521/mybundles)
+    BUNDLEDIR(/cicssvy/cics5521/mybundles/AP2019GraphQL_1.0.0)
         STATE(ENABLED);
 
    SET PROGRAM(FCBOOK)
